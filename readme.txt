@@ -37,7 +37,11 @@ If you have an idea or a pull request, contribute here:
 
 https://github.com/cubetech/wordpress.cubetech-accordion
                                                                                                                                                                   
-== Screenshots ==                                                                                                                                                 
+== Screenshots ==
+
+1. Add shortcode in TinyMCE
+2. Accordion closed
+3. Accordion opened
 
 == Changelog ==                                                                                                                                                   
 
