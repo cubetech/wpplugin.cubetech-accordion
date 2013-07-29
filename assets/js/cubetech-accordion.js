@@ -10,7 +10,6 @@ jQuery(function() {
                 	if(toggle.find('.cubetech-accordion-content').is(toggle.parent('div').find('.cubetech-accordion-active').find('.cubetech-accordion-content:visible'))) {
                         toggle.parent('div').find('.cubetech-accordion-active').find('.cubetech-accordion-content:visible').slideUp();
                         toggle.parent('div').find('.cubetech-accordion-active').removeClass('cubetech-accordion-active');
-                        toggle.toggleClass('cubetech-accordion-active');
                 	} else {
                         toggle.parent('div').find('.cubetech-accordion-active').find('.cubetech-accordion-content:visible').slideUp();
                         toggle.parent('div').find('.cubetech-accordion-active').removeClass('cubetech-accordion-active');
