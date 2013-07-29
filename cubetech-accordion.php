@@ -11,7 +11,6 @@
 include_once('lib/cubetech-post-type.php');
 include_once('lib/cubetech-shortcode.php');
 include_once('lib/cubetech-group.php');
-include_once('lib/cubetech-widget.php');
 
 wp_enqueue_script('jquery');
 wp_register_script('cubetech_accordion_js', plugins_url('assets/js/cubetech-accordion.js', __FILE__), 'jquery');
