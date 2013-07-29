@@ -1,0 +1,11 @@
+.cubetech-accordion { margin: 0 0 20px 0; display: block; border: 1px solid #eee; }
+.cubetech-accordion-active { border-color: #ddd; }
+.cubetech-accordion h2.cubetech-accordion-title { cursor: pointer; display: block; line-height: 22px; font-size: 16px; position: relative; padding: 15px 60px 15px 20px; margin: 0px; font-weight: normal; }
+.cubetech-accordion h2.cubetech-accordion-title i { margin-right: 10px; }
+.cubetech-accordion h2.cubetech-accordion-title .toggle-down,
+.cubetech-accordion h2.cubetech-accordion-title .toggle-up { display: none; position: absolute; font-size: 14px; line-height: 20px; margin: -10px 0 0 0; top: 50%; right: 20px; opacity: 0.6; }                                                                                                                                         
+.cubetech-accordion h2.cubetech-accordion-title .toggle-down { display: block; }                                         
+.cubetech-accordion-active h2.cubetech-accordion-title .toggle-down { display: none; }                                   
+.cubetech-accordion-active h2.cubetech-accordion-title .toggle-up { display: block; }                                    
+.cubetech-accordion .cubetech-accordion-content { border-top: 1px solid #eee; padding: 20px; }                                                                                                                                                 
+.cubetech-accordion .cubetech-accordion-content { display: none; }                                                                 
