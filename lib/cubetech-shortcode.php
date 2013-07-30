@@ -4,7 +4,7 @@ function cubetech_accordion_shortcode($atts)
 	extract(shortcode_atts(array(
 		'group'			=> false,
 		'single'		=> false,
-		'orderby' 		=> false,
+		'orderby' 		=> 'menu_order',
 		'order'			=> 'asc',
 		'numberposts'	=> 999,
 		'offset'		=> 0,
