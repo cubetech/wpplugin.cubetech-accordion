@@ -7,5 +7,5 @@
 .cubetech-accordion h2.cubetech-accordion-title .toggle-down { display: block; }                                         
 .cubetech-accordion-active h2.cubetech-accordion-title .toggle-down { display: none; }                                   
 .cubetech-accordion-active h2.cubetech-accordion-title .toggle-up { display: block; }                                    
-.cubetech-accordion .cubetech-accordion-content { border-top: 1px solid #eee; padding: 20px; }                                                                                                                                                 
+.cubetech-accordion .cubetech-accordion-content { border-top: 1px solid #eee; padding: 20px 0px; }                                                                                                                                                 
 .cubetech-accordion .cubetech-accordion-content { display: none; }                                                                 
