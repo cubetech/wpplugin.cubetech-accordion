@@ -2,15 +2,15 @@
 function cubetech_accordion_create_taxonomy() {
 	
 	$labels = array(
-		'name'                => __( 'Gruppen'),
-		'singular_name'       => __( 'Gruppe' ),
+		'name'                => __( 'Akkordiongruppen'),
+		'singular_name'       => __( 'Akkordiongruppe' ),
 		'search_items'        => __( 'Gruppen durchsuchen' ),
-		'all_items'           => __( 'Alle Gruppen' ),
-		'edit_item'           => __( 'Gruppe bearbeiten' ), 
-		'update_item'         => __( 'Gruppe aktualisiseren' ),
+		'all_items'           => __( 'Alle Akkordiongruppen' ),
+		'edit_item'           => __( 'Akkordiongruppe bearbeiten' ), 
+		'update_item'         => __( 'Akkordiongruppe aktualisiseren' ),
 		'add_new_item'        => __( 'Neue Gruppe hinzufügen' ),
 		'new_item_name'       => __( 'Gruppenname' ),
-		'menu_name'           => __( 'Gruppen' )
+		'menu_name'           => __( 'Akkordiongruppe' )
 	);
 
 	$args = array(
