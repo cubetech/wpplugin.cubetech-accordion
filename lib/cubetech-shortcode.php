@@ -57,7 +57,7 @@ function cubetech_accordion_shortcode($atts)
 		{
 			if(has_excerpt()) $return .= $post->post_excerpt . '<br/>';
 		}
-		$return .= $post->post_content;
+		$return .= apply_filters('the_content', $post->post_content);
 
 		$return .= '</div>
 		</div>';

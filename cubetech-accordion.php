@@ -102,4 +102,21 @@ function cubetech_accordion_dialog() {
 	<?php
 }
 
+add_filter( 'template_include', 'cubetech_accordion_template', 1 );
+
+function cubetech_accordion_template($template_path) {
+    if ( get_post_type() == 'cubetech_accordion' ) {
+        if ( is_single() ) {
+            // checks if the file exists in the theme first,
+            // otherwise serve the file from the plugin
+            if ( $theme_file = locate_template( array ( 'single-cubetech_accordion.php' ) ) ) {
+                $template_path = $theme_file;
+            } else {
+                $template_path = plugin_dir_path( __FILE__ ) . '/templates/single.php';
+            }
+        }
+    }
+    return $template_path;
+}
+
 ?>
