@@ -3,7 +3,7 @@
 Plugin Name: cubetech Accordion
 Plugin URI: http://www.cubetech.ch
 Description: cubetech Accordion - create accordions in an easy admin panel, group them and add with a shortcode
-Version: 1.0.1
+Version: 1.0.2
 Author: cubetech GmbH
 Author URI: http://www.cubetech.ch
 */
