@@ -1,4 +1,5 @@
 <?php
+
 function cubetech_accordion_create_post_type() {
 	register_post_type('cubetech_accordion',
 		array(
@@ -28,5 +29,9 @@ function cubetech_accordion_create_post_type() {
 	);
 	flush_rewrite_rules();
 }
-add_action('init', 'cubetech_accordion_create_post_type');
+
+function cubetech_accordion_destroy_post_type() {
+	flush_rewrite_rules();
+}
+
 ?>
