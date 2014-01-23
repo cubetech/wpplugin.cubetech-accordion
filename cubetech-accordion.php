@@ -119,8 +119,8 @@ function cubetech_accordion_template($template_path) {
     return $template_path;
 }
 
-// Register post type on activation
-register_activation_hook(__FILE__, 'cubetech_accordion_create_post_type'); 
+// Flush rules on activation
+register_activation_hook(__FILE__, 'cubetech_accordion_activate_post_type'); 
 
 // On deactivation flush rules
 register_deactivation_hook(__FILE__, 'cubetech_accordion_destroy_post_type');

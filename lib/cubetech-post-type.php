@@ -31,6 +31,10 @@ function cubetech_accordion_create_post_type() {
 
 add_action('init', 'cubetech_accordion_create_post_type');
 
+function cubetech_accordion_activate_post_type() {
+	flush_rewrite_rules();
+}
+
 function cubetech_accordion_destroy_post_type() {
 	flush_rewrite_rules();
 }
