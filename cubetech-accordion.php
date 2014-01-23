@@ -102,7 +102,7 @@ function cubetech_accordion_dialog() {
 	<?php
 }
 
-add_filter( 'template_include', 'cubetech_accordion_template', 1 );
+add_filter( 'single_template', 'cubetech_accordion_template');
 
 function cubetech_accordion_template($template_path) {
     if ( get_post_type() == 'cubetech_accordion' ) {

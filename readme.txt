@@ -46,7 +46,7 @@ https://github.com/cubetech/wordpress.cubetech-accordion
 == Changelog ==                                                                                                                                                   
 
 = 1.0.3 =
-* Fix for URL rewriting
+* Fix for URL rewriting, fixed single template
 
 = 1.0 =
 * First stable version
