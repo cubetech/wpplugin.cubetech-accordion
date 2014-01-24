@@ -23,7 +23,6 @@ function cubetech_accordion_create_taxonomy() {
 	);
 
 	register_taxonomy( 'cubetech_accordion_group', array( 'cubetech_accordion' ), $args );
-	flush_rewrite_rules();
 }
 add_action('init', 'cubetech_accordion_create_taxonomy');
 ?>
