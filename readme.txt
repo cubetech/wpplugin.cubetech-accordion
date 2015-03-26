@@ -2,9 +2,9 @@
 Contributors: cubetech, chrigu99
 Donate link: http://www.cubetech.ch
 Tags: accordion, jquery, cubetech, group, custom, post, type, custom, customizable
-Requires at least: 3.4
-Tested up to: 3.8
-Stable tag: 1.0.5
+Requires at least: 3.8
+Tested up to: 4.2
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ https://github.com/cubetech/wordpress.cubetech-accordion
 3. Accordion opened
 
 == Changelog ==                                                                                                                                                   
+
+= 1.0.6 =
+* Fixed TinyMCE Button
 
 = 1.0.5 =
 * Version tested for WP 3.8

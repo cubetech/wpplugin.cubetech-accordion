@@ -3,7 +3,7 @@
 Plugin Name: cubetech Accordion
 Plugin URI: http://www.cubetech.ch
 Description: cubetech Accordion - create accordions in an easy admin panel, group them and add with a shortcode
-Version: 1.0.5
+Version: 1.0.6
 Author: cubetech GmbH
 Author URI: http://www.cubetech.ch
 */
@@ -12,11 +12,11 @@ include_once('lib/cubetech-post-type.php');
 include_once('lib/cubetech-shortcode.php');
 include_once('lib/cubetech-group.php');
 
-wp_enqueue_script('jquery');
-wp_register_script('cubetech_accordion_js', plugins_url('assets/js/cubetech-accordion.js', __FILE__), 'jquery');
+wp_register_script('cubetech_accordion_js', plugins_url('assets/js/cubetech-accordion.js', __FILE__), array('jquery', 'wpdialogs'));
 wp_enqueue_script('cubetech_accordion_js');
 
 add_action('wp_enqueue_scripts', 'cubetech_accordion_add_styles');
+add_action( 'admin_enqueue_scripts', 'enqueue_css' );
 
 function cubetech_accordion_add_styles() {
 	wp_register_style('cubetech-accordion-css', plugins_url('assets/css/cubetech-accordion.css', __FILE__) );
@@ -54,6 +54,13 @@ function cubetech_accordion_addbuttons() {
 		add_filter("mce_external_plugins", "add_cubetech_accordion_tinymce_plugin");
 		add_filter('mce_buttons', 'register_cubetech_accordion_button');
 		add_action( 'admin_footer', 'cubetech_accordion_dialog' );
+	}
+}
+
+if(!function_exists('enqueue_css')) {
+	function enqueue_css() {
+		wp_register_style('custom_jquery-ui-dialog', plugins_url('assets/css/jquery-ui-dialog.min.css', __FILE__) );
+		wp_enqueue_style('custom_jquery-ui-dialog');
 	}
 }
  
