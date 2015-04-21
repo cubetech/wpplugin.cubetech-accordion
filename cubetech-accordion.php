@@ -3,7 +3,7 @@
 Plugin Name: cubetech Accordion
 Plugin URI: http://www.cubetech.ch
 Description: cubetech Accordion - create accordions in an easy admin panel, group them and add with a shortcode
-Version: 1.0.6
+Version: 1.0.7
 Author: cubetech GmbH
 Author URI: http://www.cubetech.ch
 */
@@ -12,13 +12,14 @@ include_once('lib/cubetech-post-type.php');
 include_once('lib/cubetech-shortcode.php');
 include_once('lib/cubetech-group.php');
 
-wp_register_script('cubetech_accordion_js', plugins_url('assets/js/cubetech-accordion.js', __FILE__), array('jquery', 'wpdialogs'));
-wp_enqueue_script('cubetech_accordion_js');
+add_action('wp_enqueue_scripts', 'cubetech_accordion_add_styles_nd_scripts');
+add_action('admin_enqueue_scripts', 'enqueue_css' );
+add_action('admin_enqueue_scripts', 'cubetech_accordion_add_styles_nd_scripts', 100);
 
-add_action('wp_enqueue_scripts', 'cubetech_accordion_add_styles');
-add_action( 'admin_enqueue_scripts', 'enqueue_css' );
+function cubetech_accordion_add_styles_nd_scripts() {
+	wp_register_script('cubetech_accordion_js', plugins_url('assets/js/cubetech-accordion.js', __FILE__), array('jquery', 'wpdialogs'));
+	wp_enqueue_script('cubetech_accordion_js');
 
-function cubetech_accordion_add_styles() {
 	wp_register_style('cubetech-accordion-css', plugins_url('assets/css/cubetech-accordion.css', __FILE__) );
 	wp_enqueue_style('cubetech-accordion-css');
 	wp_enqueue_style('cubetech-accordion-fontawesome', plugins_url('assets/fonts/fontawesome/css/font-awesome.min.css', __FILE__) );
@@ -103,7 +104,7 @@ function cubetech_accordion_dialog() {
 			<p><input type="checkbox" name="single" id="single" /> Immer nur ein offener Slide in der Gruppe</p>
 		</div>
 		<div>
-			<p><input type="submit" class="button-primary" value="Akkordion einfügen" onClick="if ( taxonomy.value > 0 ) { tinyMCE.activeEditor.execCommand('mceInsertContent', 0, '[cubetech-accordion group=' + taxonomy.value + ' single=' + single.checked + ']'); tinyMCEPopup.close(); }" /></p>
+			<p><input type="submit" class="button-primary" value="Akkordion einfügen" onClick="if ( taxonomy.value > 0 ) { tinyMCE.activeEditor.execCommand('mceInsertContent', 0, '[cubetech-accordion group=' + taxonomy.value + ' single=' + single.checked + ']'); tinyMCE.activeEditor.windowManager.close(this); }" /></p>
 		</div>
 	</div>
 	<?php
