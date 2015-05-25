@@ -1,16 +1,16 @@
 <?php
-function cubetech_accordion_create_taxonomy() {
-	
+function cubetech_events_create_taxonomy() {
+
 	$labels = array(
-		'name'                => __( 'Akkordiongruppen'),
-		'singular_name'       => __( 'Akkordiongruppe' ),
+		'name'                => __( 'Eventgruppen'),
+		'singular_name'       => __( 'Eventgruppe' ),
 		'search_items'        => __( 'Gruppen durchsuchen' ),
-		'all_items'           => __( 'Alle Akkordiongruppen' ),
-		'edit_item'           => __( 'Akkordiongruppe bearbeiten' ), 
-		'update_item'         => __( 'Akkordiongruppe aktualisiseren' ),
+		'all_items'           => __( 'Alle Eventgruppen' ),
+		'edit_item'           => __( 'Eventgruppe bearbeiten' ),
+		'update_item'         => __( 'Eventgruppe aktualisiseren' ),
 		'add_new_item'        => __( 'Neue Gruppe hinzufügen' ),
 		'new_item_name'       => __( 'Gruppenname' ),
-		'menu_name'           => __( 'Akkordiongruppe' )
+		'menu_name'           => __( 'Eventgruppe' )
 	);
 
 	$args = array(
@@ -19,11 +19,10 @@ function cubetech_accordion_create_taxonomy() {
 		'show_ui'             => true,
 		'show_admin_column'   => true,
 		'query_var'           => true,
-		'rewrite'             => array( 'slug' => 'accordiongruppe' )
+		'rewrite'             => array( 'slug' => 'events' )
 	);
 
-	register_taxonomy( 'cubetech_accordion_group', array( 'cubetech_accordion' ), $args );
-	flush_rewrite_rules();
+	register_taxonomy( 'cubetech_events_group', array( 'cubetech_events' ), $args );
 }
-add_action('init', 'cubetech_accordion_create_taxonomy');
+add_action('init', 'cubetech_events_create_taxonomy');
 ?>

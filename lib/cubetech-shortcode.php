@@ -1,5 +1,5 @@
 <?php
-function cubetech_accordion_shortcode($atts)
+function cubetech_events_shortcode($atts)
 {
 	extract(shortcode_atts(array(
 		'group'			=> false,
@@ -20,12 +20,12 @@ function cubetech_accordion_shortcode($atts)
 		'offset'          	=> $offset,
 		'orderby'         	=> $orderby,
 		'order'           	=> $order,
-		'post_type'       	=> 'cubetech_accordion',
+		'post_type'       	=> 'cubetech_events',
 		'post_status'     	=> $poststatus,
 		'suppress_filters' 	=> true,
 		'tax_query' => array(
 		    array(
-		        'taxonomy' => 'cubetech_accordion_group',
+		        'taxonomy' => 'cubetech_events_group',
 		        'terms' => $group,
 		        'field' => 'id',
 		    )
@@ -36,14 +36,14 @@ function cubetech_accordion_shortcode($atts)
 	$class = '';
 	
 	if($single == 'true')
-		$class = ' cubetech-accordion-single';
+		$class = ' cubetech-events-single';
 	
-	$return = '<div class="cubetech-accordion-container' . $class . '">';
+	$return = '<div class="cubetech-events-container' . $class . '">';
 	
 	foreach ($posts as $post) {
 		$return .= '
-		<div class="cubetech-accordion">
-			<h2 class="cubetech-accordion-title">';
+		<div class="cubetech-events">
+			<h2 class="cubetech-events-title">';
 
 		if($title == 'excerpt' && $post->post_excerpt != '') {
 			if(has_excerpt()) $return .= $post->post_excerpt;
@@ -52,7 +52,7 @@ function cubetech_accordion_shortcode($atts)
 		}
 		
 		$return .= '<i class="toggle-down fa-icon-caret-down"></i><i class="toggle-up fa-icon-caret-up"></i></h2>
-			<div class="cubetech-accordion-content">';
+			<div class="cubetech-events-content">';
 		if($title == 'both')
 		{
 			if(has_excerpt()) $return .= $post->post_excerpt . '<br/>';
@@ -67,5 +67,5 @@ function cubetech_accordion_shortcode($atts)
 	return $return . '</div>';
 
 }
-add_shortcode('cubetech-accordion', 'cubetech_accordion_shortcode');
+add_shortcode('cubetech-events', 'cubetech_events_shortcode');
 ?>
