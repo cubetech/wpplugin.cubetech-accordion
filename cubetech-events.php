@@ -13,8 +13,8 @@ include_once('lib/cubetech-metabox.php');
 include_once('lib/cubetech-shortcode.php');
 include_once('lib/cubetech-group.php');
 
-add_image_size( 'cubetech-events-thumb', 272, 180, true );
-add_image_size( 'cubetech-events-block', 423, 217, true );
+add_image_size( 'cubetech-events-thumb', 320, 210, true );
+add_image_size( 'cubetech-events-block', 528, 270, true );
 
 wp_enqueue_script('jquery');
 wp_register_script('cubetech_events_js', plugins_url('assets/js/cubetech-events.js', __FILE__), 'jquery');

@@ -1,5 +1,6 @@
 .main .page-content.cubetech-events header h1 { font-size: 21px; line-height: 20px; margin-top: 0; }
 .main .page-content.cubetech-events header { padding-bottom: 18px; border-bottom: 1px solid #cbcbcb; margin-bottom: 16px; }
+.main .page-content.cubetech-events .cubetech-events-thumb { width: 100%; height: auto; }
 .main .cubetech-events-container { margin-top: 20px; }
 .main .cubetech-events .cubetech-events-short { margin-bottom: 15px; }
 .main .cubetech-events .cubetech-events-meta .row-fluid > div { min-height: 22px; }
