@@ -23,6 +23,30 @@ function cubetech_events_create_taxonomy() {
 	);
 
 	register_taxonomy( 'cubetech_events_group', array( 'cubetech_events' ), $args );
+	
+	
+	$labels = array(
+		'name'                => __( 'Eventjahr'),
+		'singular_name'       => __( 'Eventjahr' ),
+		'search_items'        => __( 'Eventjahr durchsuchen' ),
+		'all_items'           => __( 'Alle Eventjahre' ),
+		'edit_item'           => __( 'Eventjahr bearbeiten' ),
+		'update_item'         => __( 'Eventjahr aktualisiseren' ),
+		'add_new_item'        => __( 'Neues Eventjahr hinzufügen' ),
+		'new_item_name'       => __( 'Eventjahr' ),
+		'menu_name'           => __( 'Eventjahr' )
+	);
+
+	$args = array(
+		'hierarchical'        => true,
+		'labels'              => $labels,
+		'show_ui'             => true,
+		'show_admin_column'   => true,
+		'query_var'           => true,
+		'rewrite'             => array( 'slug' => 'eventjahr' )
+	);
+
+	register_taxonomy( 'cubetech_events_year', array( 'cubetech_events' ), $args );
 }
 add_action('init', 'cubetech_events_create_taxonomy');
 ?>
