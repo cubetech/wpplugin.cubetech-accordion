@@ -1,18 +1,18 @@
-=== cubetech-accordion ===
+=== cubetech-events ===
 Contributors: cubetech, chrigu99
 Donate link: http://www.cubetech.ch
-Tags: accordion, jquery, cubetech, group, custom, post, type, custom, customizable
+Tags: events, calendar, date, jquery, cubetech, group, custom, post, type, custom, customizable
 Requires at least: 3.4
 Tested up to: 3.6
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-cubetech Accordion - create accordions in an easy admin panel and group them
+cubetech Events - simple event plugin
 
 == Description ==
 
-cubetech Accordion - create accordions in an easy admin panel and group them.
+cubetech Events - simple event plugin
 
 Plugin features:
 
@@ -35,13 +35,9 @@ This section describes how to install the plugin and get it working.
                                                                                                                                                                   
 If you have an idea or a pull request, contribute here:
 
-https://github.com/cubetech/wordpress.cubetech-accordion
+https://github.com/cubetech/wordpress.cubetech-events
                                                                                                                                                                   
 == Screenshots ==
-
-1. Add shortcode in TinyMCE
-2. Accordion closed
-3. Accordion opened
 
 == Changelog ==                                                                                                                                                   
 

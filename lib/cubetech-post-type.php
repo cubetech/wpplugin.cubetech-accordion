@@ -1,32 +1,32 @@
 <?php
-function cubetech_accordion_create_post_type() {
-	register_post_type('cubetech_accordion',
+function cubetech_events_create_post_type() {
+	register_post_type('cubetech_events',
 		array(
 			'labels' => array(
-				'name' => __('Akkordion'),
-				'singular_name' => __('Element'),
-				'add_new' => __('Element hinzufügen'),
-				'add_new_item' => __('Neues Element hinzufügen'),
-				'edit_item' => __('Element bearbeiten'),
-				'new_item' => __('Neues Element'),
-				'view_item' => __('Element betrachten'),
-				'search_items' => __('Elemente durchsuchen'),
-				'not_found' => __('Keine Elemente gefunden.'),
-				'not_found_in_trash' => __('Keine Elemente gefunden.')
+				'name' => __('Events'),
+				'singular_name' => __('Event'),
+				'add_new' => __('Event hinzufügen'),
+				'add_new_item' => __('Neuer Event hinzufügen'),
+				'edit_item' => __('Event bearbeiten'),
+				'new_item' => __('Neuer Event'),
+				'view_item' => __('Event betrachten'),
+				'search_items' => __('Evnet durchsuchen'),
+				'not_found' => __('Keine Events gefunden.'),
+				'not_found_in_trash' => __('Keine Events gefunden.')
 			),
 			'capability_type' => 'post',
-			'taxonomies' => array('cubetech_group'),
+			'taxonomies' => array('cubetech_events_group'),
 			'public' => true,
 			'has_archive' => false,
-			'rewrite' => array('slug' => 'accordion', 'with_front' => false),
+			'rewrite' => array('slug' => 'events', 'with_front' => false),
 			'show_ui' => true,
 			'menu_position' => '20',
 			'menu_icon' => null,
 			'hierarchical' => true,
-			'supports' => array('title', 'editor')
+			'supports' => array('title', 'editor', 'thumbnail')
 		)
 	);
-	flush_rewrite_rules();
+	//flush_rewrite_rules();
 }
-add_action('init', 'cubetech_accordion_create_post_type');
+add_action('init', 'cubetech_events_create_post_type');
 ?>
