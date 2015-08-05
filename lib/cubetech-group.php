@@ -19,7 +19,7 @@ function cubetech_events_create_taxonomy() {
 		'show_ui'             => true,
 		'show_admin_column'   => true,
 		'query_var'           => true,
-		'rewrite'             => array( 'slug' => 'events' )
+		'rewrite'             => array( 'slug' => 'eventgruppe' )
 	);
 
 	register_taxonomy( 'cubetech_events_group', array( 'cubetech_events' ), $args );
