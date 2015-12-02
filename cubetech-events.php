@@ -16,13 +16,12 @@ include_once('lib/cubetech-group.php');
 add_image_size( 'cubetech-events-thumb', 272, 180, true );
 add_image_size( 'cubetech-events-block', 423, 217, true );
 
-wp_enqueue_script('jquery');
-wp_register_script('cubetech_events_js', plugins_url('assets/js/cubetech-events.js', __FILE__), 'jquery');
-wp_enqueue_script('cubetech_events_js');
-
 add_action('wp_enqueue_scripts', 'cubetech_events_add_styles');
 
 function cubetech_events_add_styles() {
+	wp_enqueue_script('jquery');
+	wp_register_script('cubetech_events_js', plugins_url('assets/js/cubetech-events.js', __FILE__), 'jquery');
+	wp_enqueue_script('cubetech_events_js');
 	wp_register_style('cubetech-events-css', plugins_url('assets/css/cubetech-events.css', __FILE__) );
 	wp_enqueue_style('cubetech-events-css');
 }
